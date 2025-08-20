@@ -1,4 +1,4 @@
-# ◎ ZeroVim
+# Neovinimal
 A lightweight Neovim config with **Lua** and [lazy.nvim](https://github.com/folke/lazy.nvim).
 
 <br>
