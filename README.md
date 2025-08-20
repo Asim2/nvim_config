@@ -1,5 +1,5 @@
-# ⚡ Neovim Config
-My personal Neovim configuration using **Lua** and [lazy.nvim](https://github.com/folke/lazy.nvim) as the plugin manager.
+# ◎ ZeroVim
+A lightweight Neovim config with **Lua** and [lazy.nvim](https://github.com/folke/lazy.nvim).
 
 <br>
 
@@ -11,19 +11,21 @@ My personal Neovim configuration using **Lua** and [lazy.nvim](https://github.co
 - `autocmds.lua` → Auto commands (e.g. trim trailing whitespace, line numbers)
 <br>
 
-## ✨ Features
+## ✨ Plugins
 - **Plugin manager**: lazy.nvim  
 - **UI**: Catppuccin colorscheme, lualine statusline  
-- **File navigation**: nvim-tree, fzf-lua  
-- **Editing helpers**: mini.nvim (pairs, comment, align, ai), nvim-surround, nvim-spider  
-- **LSP**: mason.nvim + mason-lspconfig for Python (pyright) and Lua (lua_ls)  
+- **File explorer**: nvim-tree, fzf-lua  
+- **Editing helpers**: mini.nvim (pairs, comment, align etc), nvim-surround, nvim-spider (smarter word motions)  
+- **LSP**: mason.nvim + mason-lspconfig for installing and managing LSPs, linters, formatters
 - **Treesitter** for syntax highlighting and text objects  
-- **Dashboard**: alpha-nvim + persistence for sessions  
+- **Neomux** to emulate Tmux style tab and window splitting within a single Neovim session 
+- **Dashboard**: alpha-nvim + persistence for sessions
+
 
 <br>
 
 ## 🚀 Setup
-1. Install [Neovim](https://neovim.io/) (≥ 0.9 recommended).  
+1. Install requirements.  
 2. Clone this repo into your Neovim config folder:  
    ```sh
    git clone https://github.com/Asim2/nvim_config.git ~/.config/nvim
@@ -39,21 +41,21 @@ My personal Neovim configuration using **Lua** and [lazy.nvim](https://github.co
 To get the most out of this config, make sure the following are installed and available in your `PATH`:
 
 - [Neovim](https://neovim.io/) (v0.9 or newer recommended)
-- [Git](https://git-scm.com/) (needed to fetch plugins with lazy.nvim)
-- [ripgrep](https://github.com/BurntSushi/ripgrep) (for live grep)
-- [fzf](https://github.com/junegunn/fzf) (for fuzzy finding)
+- [Git](https://git-scm.com/) (plugins sourcing)
+- [ripgrep](https://github.com/BurntSushi/ripgrep) (live grep)
+- [fzf](https://github.com/junegunn/fzf) (fuzzy finder)
 
 <br>
 
-## ⌨️ Custom Keybindings
+## ⌨️ Keybindings
 
 **Leader key:** `,`
 
 #### General / Editing
-- `<CR>` → clear search highlight (`:nohlsearch`)
+- `<CR>` / `Enter` → clear search highlight (`:nohlsearch`)
 - `<leader>o` → insert blank line **below** (stay in normal mode)
 - `<leader>O` → insert blank line **above** (stay in normal mode)
-- `<leader><Tab>` → toggle **relative line numbers**
+- `<leader><Tab>` → toggle **relative line numbers** in buffer
 
 #### File Paths → Clipboard
 - `<F4>` → yank **directory** of current file to clipboard
@@ -96,9 +98,7 @@ To get the most out of this config, make sure the following are installed and av
 #### “Workflowy-like” Line Moves & Indent
 - **Move lines**
   - Normal: `<S-A-j>` / `<S-A-k>` → move line down / up
-  - Insert: `<S-A-j>` / `<S-A-k>` → move line down / up (return to insert)
   - Visual: `<S-A-j>` / `<S-A-k>` → move selection down / up
 - **Indent**
-  - Normal: `<S-A-l>` → indent right
-  - Normal: `<S-A-h>` → indent left
-  - Visual: `<S-A-l>` / `<S-A-h>` → keep selection and indent
+  - Normal: `<S-A-h>` / `<S-A-l>` → outdent / indent
+  - Visual: `<S-A-l>` / `<S-A-h>` → selection outdent / indent
