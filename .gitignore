@@ -1,0 +1,18 @@
+# --- Windows ---
+Thumbs.db
+Desktop.ini
+*.lnk
+*Zone.Identifier
+
+# --- Editor/IDE ---
+*.swp
+*.swo
+*.swn
+*.tmp
+*.bak
+*.orig
+
+# --- Nvim plugins ---
+# Ignore local clone of plugins (lazy.nvim handles these)
+nvim-data/
+lazy-lock.json
