@@ -1,7 +1,6 @@
 # ⚡ Neovim Config
 My personal Neovim configuration using **Lua** and [lazy.nvim](https://github.com/folke/lazy.nvim) as the plugin manager.
-<br>
-<br>
+
 <br>
 
 ## 📂 Files
@@ -10,7 +9,7 @@ My personal Neovim configuration using **Lua** and [lazy.nvim](https://github.co
 - `plugins.lua` → Plugin list and setup
 - `keymaps.lua` → Custom key mappings (editing, navigation, FZF, tree, etc.)
 - `autocmds.lua` → Auto commands (e.g. trim trailing whitespace, line numbers)
-
+<br>
 
 ## ✨ Features
 - **Plugin manager**: lazy.nvim  
@@ -21,7 +20,7 @@ My personal Neovim configuration using **Lua** and [lazy.nvim](https://github.co
 - **Treesitter** for syntax highlighting and text objects  
 - **Dashboard**: alpha-nvim + persistence for sessions  
 
-
+<br>
 
 ## 🚀 Setup
 1. Install [Neovim](https://neovim.io/) (≥ 0.9 recommended).  
@@ -34,6 +33,16 @@ My personal Neovim configuration using **Lua** and [lazy.nvim](https://github.co
 3. Start Neovim – plugins will auto-install on first launch.
 
 <br>
+
+## 📦 Requirements
+
+To get the most out of this config, make sure the following are installed and available in your `PATH`:
+
+- [Neovim](https://neovim.io/) (v0.9 or newer recommended)
+- [Git](https://git-scm.com/) (needed to fetch plugins with lazy.nvim)
+- [ripgrep](https://github.com/BurntSushi/ripgrep) (for live grep)
+- [fzf](https://github.com/junegunn/fzf) (for fuzzy finding)
+
 <br>
 
 ## ⌨️ Custom Keybindings
