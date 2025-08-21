@@ -1,5 +1,5 @@
 # Neovinimal
-A lightweight Neovim config with **Lua** and [lazy.nvim](https://github.com/folke/lazy.nvim).
+A minimal Neovim config with **Lua** and [lazy.nvim](https://github.com/folke/lazy.nvim).
 
 <br>
 
@@ -24,26 +24,61 @@ A lightweight Neovim config with **Lua** and [lazy.nvim](https://github.com/folk
 
 <br>
 
-## 🚀 Setup
-1. Install requirements.  
-2. Clone this repo into your Neovim config folder:  
-   ```sh
-   git clone https://github.com/Asim2/nvim_config.git ~/.config/nvim
-   ```
-    (On Windows: $env:LOCALAPPDATA\nvim)
-    
-3. Start Neovim – plugins will auto-install on first launch.
-
-<br>
-
 ## 📦 Requirements
 
-To get the most out of this config, make sure the following are installed and available in your `PATH`:
+Have these on your `PATH`:
 
 - [Neovim](https://neovim.io/) (v0.9 or newer recommended)
 - [Git](https://git-scm.com/) (plugins sourcing)
 - [ripgrep](https://github.com/BurntSushi/ripgrep) (live grep)
 - [fzf](https://github.com/junegunn/fzf) (fuzzy finder)
+
+
+**Optional (only if you use these features):**
+- **Zig / gcc / clang**: compile Tree-sitter parsers during install/update. 
+  - If opting out, remove languages from treesitter parser sections in plugins.lua
+- **Node.js + npm**: required for **Pyright** (Python LSP). 
+  - If opting out, remove "pyright" from Mason `ensure_installed`in plugins.lua
+- **Python + pip**: needed if you opt-in to install **black** and **pylint** via Mason  
+
+<br>
+
+## 🚀 Setup
+1. **Install core tools**  
+
+   - **Ubuntu (apt):**
+     ```sh
+     sudo apt update
+     sudo apt install -y neovim git ripgrep fzf nodejs npm python3 python3-pip build-essential
+     ```
+     > `build-essential` provides `gcc/clang` for Tree-sitter compilation.  
+
+   - **Windows (Scoop):**  
+     Install [Scoop](https://scoop.sh/) first, then:  
+     ```powershell
+     scoop install neovim ripgrep fzf git
+     ```
+     **Optional (enable extra features):**
+     ```powershell
+     scoop install zig          # compile Tree-sitter parsers (optional)
+     scoop install nodejs-lts   # needed for Pyright LSP (optional)
+     scoop install python       # needed if you want black/pylint via Mason (optional)
+
+2. Clone this repo into your Neovim config folder:  
+   ```sh
+   # macOS/Linux
+   git clone https://github.com/Asim2/nvim_config.git ~/.config/nvim
+
+   # Windows
+   git clone https://github.com/Asim2/nvim_config.git $env:USERPROFILE\AppData\Local\nvim
+
+   ```
+    
+3. Launch `nvim`. Plugins will auto-install on first launch.
+
+<br>
+
+
 
 <br>
 
